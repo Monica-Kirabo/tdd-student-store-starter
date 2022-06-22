@@ -1,12 +1,12 @@
 import * as React from "react";
-import "./ProductDetails.css";
+import "./Logo.css";
 
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
-export default function ProductDetails() {
+export default function Logo() {
   return (
-    <div className="Products">
-      <p>Products</p>
+    <div className="logo">
+      <link to="/">Home</link>
     </div>
   );
 }
