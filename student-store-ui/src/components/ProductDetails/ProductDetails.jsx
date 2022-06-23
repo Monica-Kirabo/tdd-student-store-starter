@@ -6,6 +6,8 @@ import Sidebar from "../Sidebar/Sidebar";
 export default function ProductDetails() {
   return (
     <div className="Products">
+      <Sidebar />
+      <Navbar />
       <p>Products</p>
     </div>
   );

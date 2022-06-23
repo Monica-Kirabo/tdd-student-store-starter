@@ -7,6 +7,9 @@ export default function Logo() {
   return (
     <div className="logo">
       <link to="/">Home</link>
+
+      <Navbar />
+      <Sidebar />
     </div>
   );
 }

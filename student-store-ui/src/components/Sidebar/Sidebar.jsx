@@ -1,9 +1,16 @@
 import * as React from "react";
 import "./Sidebar.css";
-import Navbar from "../Navbar/Navbar";
+
 export default function Sidebar() {
   return (
-    <section className="sidebar">
+    <section
+      className="sidebar "
+      style={{
+        backgroundColor: "darkgreen",
+        width: "1in",
+        height: "15in",
+      }}
+    >
       <p>Sidebar</p>
     </section>
   );
