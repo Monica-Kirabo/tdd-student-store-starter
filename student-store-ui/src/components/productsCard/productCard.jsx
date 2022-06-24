@@ -15,6 +15,8 @@ export default function ProductsCard({ products }) {
       <div className="info">
         <p className="product-name">{products.name}</p>
         <p className="product-price">{"$" + products.price}</p>
+
+        <p className="product-price">{"$" + products.price}</p>
       </div>
       <p>Products</p>
 
