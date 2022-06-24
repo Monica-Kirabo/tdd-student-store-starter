@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 export default function ProductDetails() {
   return (
-    <div className="Products">
+    <div className="Product-details">
       <Sidebar />
       <Navbar />
       <p>Products</p>

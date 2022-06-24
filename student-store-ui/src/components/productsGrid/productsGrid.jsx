@@ -10,7 +10,7 @@ export default function ProductsGrid({ products }) {
       {products.map((products, idx) => {
         return <ProductsCard key={products.id} products={products} />;
       })}
-      <Navbar />
+
       <Sidebar />
     </div>
   );
