@@ -3,6 +3,7 @@ import "./Home.css";
 import Sidebar from "../Sidebar/Sidebar";
 import Navbar from "../Navbar/Navbar";
 import Herobanner from "../Hero banner/Herobanner";
+import ProductCard from "../productsCard/productCard";
 
 export default function Home({ products }) {
   return (
@@ -11,6 +12,7 @@ export default function Home({ products }) {
       <Sidebar />
       <Herobanner />
       <productsGrid products={products} />
+
       <p> </p>
     </div>
   );

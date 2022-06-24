@@ -6,11 +6,11 @@ import Sidebar from "../Sidebar/Sidebar";
 export default function productsGrid({ products }) {
   return (
     <div className="productsGrid">
+      {products.map((products, idx) => {
+        return <ProductCard key={idx} products={products} />;
+      })}
       <Navbar />
       <Sidebar />
     </div>
   );
 }
-/*  products.map((products, idx) => {
-            return (<Home key={idx} products={products} />);
-          })*/
