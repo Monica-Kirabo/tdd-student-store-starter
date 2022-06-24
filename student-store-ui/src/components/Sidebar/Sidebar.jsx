@@ -19,13 +19,13 @@ export default function Sidebar() {
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           />
           <a href=" ">
-            <i class="fa fa-fw fa-home"></i>
+            <i className="fa fa-fw fa-home"></i>
           </a>
           <a href=" ">
-            <i class="fa fa-fw fa-wrench"></i>
+            <i className="fa fa-fw fa-wrench"></i>
           </a>
           <a href=" ">
-            <i class="fa-solid fa-cart-arrow-down"></i>
+            <i className="fa-solid fa-cart-arrow-down"></i>
           </a>
         </ul>
       </nav>

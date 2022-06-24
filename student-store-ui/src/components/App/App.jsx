@@ -1,7 +1,7 @@
 import * as React from "react";
 import Home from "../Home/Home";
 import ProductDetails from "../ProductDetails/ProductDetails";
-import productsGrid from "../productsGrid/productsGrid";
+import ProductsGrid from "../ProductsGrid/ProductsGrid";
 import NotFound from "../NotFound/NotFound";
 import Herobanner from "../Hero banner/Herobanner";
 import "./App.css";
@@ -11,21 +11,23 @@ import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 
 export default function App() {
-  const [products, setProducts] = useState("");
-  async function getProducts() {
-    try {
-      const response = await axios.get(
-        " https://codepath-store-api.herokuapp.com/store"
-      );
-      console.log(response);
-      const data = response.data;
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    async function getProducts() {
+      try {
+        const response = await axios.get(
+          "https://codepath-store-api.herokuapp.com/store"
+        );
+        console.log("response", response);
+
+        setProducts(response.data.products);
+        console.log(products);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
     getProducts();
   }, []);
 
@@ -40,7 +42,7 @@ export default function App() {
           </Routes>
         </main>
       </BrowserRouter>
-      <productsGrid products={products} />
+      <Home products={products} />
     </div>
   );
 }

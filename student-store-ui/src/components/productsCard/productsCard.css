@@ -1,0 +1,15 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+.product-card .media {
+  height: 5px;
+  width: 5px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+img {
+  height: 250px;
+  width: 240px;
+  display: flex;
+}

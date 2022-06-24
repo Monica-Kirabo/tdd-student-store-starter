@@ -1,0 +1,11 @@
+.productsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.img {
+  height: 250px;
+  width: 100px;
+}
