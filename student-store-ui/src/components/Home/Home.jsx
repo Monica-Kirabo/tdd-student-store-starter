@@ -3,12 +3,12 @@ import "./Home.css";
 import Sidebar from "../Sidebar/Sidebar";
 import Navbar from "../Navbar/Navbar";
 
-export default function Home() {
+export default function Home({ products }) {
   return (
     <div className="home">
       <Navbar />
       <Sidebar />
-      <productsGrid />
+      <productsGrid products={products} />
       <p> </p>
     </div>
   );
