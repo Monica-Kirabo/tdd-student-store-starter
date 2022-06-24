@@ -3,6 +3,7 @@ import Home from "../Home/Home";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import productsGrid from "../productsGrid/productsGrid";
 import NotFound from "../NotFound/NotFound";
+import Herobanner from "../Hero banner/Herobanner";
 import "./App.css";
 import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";

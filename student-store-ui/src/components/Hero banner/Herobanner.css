@@ -1,0 +1,8 @@
+.Herobanner {
+  width: 100%;
+  max-width: 100vw;
+  height: 350px;
+  background-color: rgb(119, 222, 119);
+  text-align: center;
+  color: white;
+}
