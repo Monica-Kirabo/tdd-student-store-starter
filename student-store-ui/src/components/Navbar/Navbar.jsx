@@ -1,22 +1,26 @@
 import * as React from "react";
 import "./Navbar.css";
-//import Logo from "/"
+import Logo from "../Logo/Logo";
 import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
 export default function Navbar() {
   return (
-    <nav
-      className="navbar"
-      style={{
-        backgroundColor: "darkgreen",
-        width: "15in",
-        height: "1in",
-      }}
-    >
-      <p>
-        <Link to="/">Home </Link>
-
-        <Link to="/products/:productId">ProductDetails</Link>
-      </p>
+    <nav className="navbar">
+      <ul>
+        <li>
+          <a href="/" className="Home">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href=" ">About Us</a>
+        </li>
+        <li>
+          <a href=" ">Buy Now</a>
+        </li>
+        <li>
+          <a href=" ">Contact Us</a>x
+        </li>
+      </ul>
     </nav>
   );
 }

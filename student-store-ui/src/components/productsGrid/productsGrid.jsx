@@ -1,10 +1,15 @@
 import * as React from "react";
 import "./productsGrid.css";
 
-export default function productsGrid() {
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Sidebar/Sidebar";
+export default function productsGrid({ products }) {
   return (
-    <div className="productsGrid">
+    <div className="productsGrid" products={products}>
       <p>Products grid</p>
+
+      <Navbar />
+      <Sidebar />
     </div>
   );
 }

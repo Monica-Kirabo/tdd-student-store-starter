@@ -1,18 +1,28 @@
 .navbar {
   width: 100%;
-  max-width: 100vw;
+  max-width: 70in;
   background: var(--dark-blue);
   color: var(--pure-white);
   height: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 var(--side-padding);
+  background-color: darkslategrey;
+  justify-content: center;
 }
 
+.navbar ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
 .navbar a {
   display: inline;
   text-decoration: none;
   justify-content: center;
   padding: 40px;
+  color: azure;
 }

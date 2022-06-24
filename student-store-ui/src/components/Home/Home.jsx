@@ -8,8 +8,8 @@ export default function Home() {
     <div className="home">
       <Navbar />
       <Sidebar />
-      <ProductsGrid />
-      <p>Home</p>
+      <productsGrid />
+      <p> </p>
     </div>
   );
 }
