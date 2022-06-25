@@ -39,6 +39,7 @@ export default function App() {
             <Route path="/" element={<Home products={products} />} />
             <Route path="/products/:productId" element={<ProductDetails />} />
             <Route path="/*" element={<NotFound />} />
+           
           </Routes>
         </main>
       </BrowserRouter>

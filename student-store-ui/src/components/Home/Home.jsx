@@ -9,6 +9,12 @@ import ProductsGrid from "../ProductsGrid/ProductsGrid";
 export default function Home({ products }) {
   return (
     <div className="home">
+      <div>
+        <a
+          href={"/products/" + products.id}
+          state={{ products: products } + products.description}
+        ></a>
+      </div>
       <Navbar />
       <Sidebar />
       <Herobanner />

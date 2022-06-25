@@ -18,7 +18,6 @@ export default function ProductsCard({ products }) {
 
         <p className="product-price">{"$" + products.price}</p>
       </div>
-      <p>Products</p>
 
       <Sidebar />
     </div>
