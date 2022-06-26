@@ -9,6 +9,7 @@ import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
+import AboutUs from "../Aboutus/AboutUs";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -38,8 +39,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home products={products} />} />
             <Route path="/products/:productId" element={<ProductDetails />} />
+
+            <Route path="/about" element={<AboutUs />} />
             <Route path="/*" element={<NotFound />} />
-           
           </Routes>
         </main>
       </BrowserRouter>
