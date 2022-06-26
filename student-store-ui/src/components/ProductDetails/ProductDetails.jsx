@@ -2,7 +2,7 @@ import * as React from "react";
 import "./ProductDetails.css";
 
 import { useEffect } from "react";
-
+import ProductView from "../ProductView/ProductView";
 import {
   BrowserRouter,
   Routes,
@@ -15,12 +15,20 @@ import {
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import axios from "axios";
+import ProductsCard from "../ProductsCard/ProductCard";
+import ProductsGrid from "../ProductsGrid/ProductsGrid";
 
 import { useState } from "react";
-export default function ProductDetails({ products }) {
+export default function ProductDetails() {
   const { productId } = useParams();
-  const location = useLocation();
-  const [product, setProduct] = useState();
+  //const location = useLocation();
+  const [products, setProduct] = useState();
+  const isLoading = !Boolean(products);
+  const element = isLoading ? (
+    "Loading.."
+  ) : (
+    <ProductView products={products} productId={2} />
+  );
 
   useEffect(async () => {
     console.log("checking the value of product id again", productId);
@@ -29,9 +37,9 @@ export default function ProductDetails({ products }) {
 
     try {
       const response = await axios.get();
-      console.log("response from second API call: ", response.data);
+      console.log("response from second API call: ", response.data.products);
 
-      setProduct(response.data.product);
+      setProduct(response.data.products);
 
       console.log(products);
     } catch (error) {
@@ -40,9 +48,7 @@ export default function ProductDetails({ products }) {
   }, []);
   return (
     <div className="Product-details">
-      <div>
-        <p>{/* product {product.id} name is {product.name} */}</p>
-      </div>
+      <div className="box">{element}</div>
       <Sidebar />
       <Navbar />
     </div>

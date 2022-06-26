@@ -6,6 +6,7 @@ import Herobanner from "../Hero banner/Herobanner";
 import ProductsCard from "../ProductsCard/ProductCard";
 import ProductsGrid from "../ProductsGrid/ProductsGrid";
 import AboutUs from "../Aboutus/AboutUs";
+import ContactUs from "../ContactuS/ContactUs";
 
 export default function Home({ products }) {
   return (
@@ -22,6 +23,7 @@ export default function Home({ products }) {
       <ProductsGrid products={products} />
 
       <AboutUs />
+      <ContactUs />
     </div>
   );
 }

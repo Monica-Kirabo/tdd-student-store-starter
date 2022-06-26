@@ -2,15 +2,19 @@ import * as React from "react";
 import "./ProductView.css";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
-export default function ProductView() {
+import ProductsCard from "../ProductsCard/ProductCard";
+export default function ProductView({ products, productId, quantity }) {
   return (
-    <div className="ProductView">
-    
-    
+    <div className="view">
+      <ProductsCard
+        showDescription={true}
+        products={products}
+        productId={productId}
+      />
+
       <Navbar />
 
       <Sidebar />
-
     </div>
   );
 }
