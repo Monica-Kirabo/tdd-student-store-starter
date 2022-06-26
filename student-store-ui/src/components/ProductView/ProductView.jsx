@@ -6,6 +6,7 @@ import ProductsCard from "../ProductsCard/ProductCard";
 export default function ProductView({ products, productId, quantity }) {
   return (
     <div className="view">
+      <h1>Best Selling Products</h1>
       <ProductsCard
         showDescription={true}
         products={products}
