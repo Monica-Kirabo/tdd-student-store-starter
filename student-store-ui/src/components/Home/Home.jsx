@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Herobanner from "../Hero banner/Herobanner";
 import ProductsCard from "../ProductsCard/ProductCard";
 import ProductsGrid from "../ProductsGrid/ProductsGrid";
+import AboutUs from "../Aboutus/AboutUs";
 
 export default function Home({ products }) {
   return (
@@ -19,6 +20,8 @@ export default function Home({ products }) {
       <Sidebar />
       <Herobanner />
       <ProductsGrid products={products} />
+
+      <AboutUs />
     </div>
   );
 }
