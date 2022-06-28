@@ -25,7 +25,7 @@
   padding: 40px;
   color: azure;
 }
-.img {
-  height: 2px;
-  width: 2px;
+.logo img {
+  height: 50px;
+  width: 50px;
 }

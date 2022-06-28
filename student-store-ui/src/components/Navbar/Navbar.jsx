@@ -6,7 +6,11 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        <div className="logo"></div>
+        <div className="logo">
+          <a href=" /">
+            <img src="https://codepath-student-store-demo.surge.sh/assets/codepath.f1b3e41a.svg " />
+          </a>
+        </div>
         <li>
           <a href=" ">
             <i className="fa fa-twitter" aria-hidden="true"></i>

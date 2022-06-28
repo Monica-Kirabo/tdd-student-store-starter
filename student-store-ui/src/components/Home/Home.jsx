@@ -2,7 +2,7 @@ import * as React from "react";
 import "./Home.css";
 import Sidebar from "../Sidebar/Sidebar";
 import Navbar from "../Navbar/Navbar";
-import Herobanner from "../Hero banner/Herobanner";
+import Hero from "../Hero /Hero";
 import ProductsCard from "../ProductsCard/ProductCard";
 import ProductsGrid from "../ProductsGrid/ProductsGrid";
 import AboutUs from "../Aboutus/AboutUs";
@@ -20,7 +20,7 @@ export default function Home({ products }) {
       </div>
       <Navbar />
       <Sidebar />
-      <Herobanner />
+      <Hero />
       <SearchBar />
       <ProductsGrid products={products} />
 

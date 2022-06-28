@@ -27,7 +27,7 @@ export default function ProductDetails() {
   const element = isLoading ? (
     "Loading.."
   ) : (
-    <ProductView products={products} productId={2} />
+    <ProductView products={products} productId={productId} />
   );
 
   useEffect(async () => {
@@ -36,7 +36,7 @@ export default function ProductDetails() {
     const url = "https://codepath-store-api.herokuapp.com/store" + productId;
 
     try {
-      const response = await axios.get();
+      const response = await axios.get(url);
       console.log("response from second API call: ", response.data.products);
 
       setProduct(response.data.products);
@@ -47,7 +47,7 @@ export default function ProductDetails() {
     }
   }, []);
   return (
-    <div className="Product-details">
+    <div className="product-detail">
       <div className="box">{element}</div>
       <Sidebar />
       <Navbar />
