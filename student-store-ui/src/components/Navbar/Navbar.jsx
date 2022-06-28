@@ -6,6 +6,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <ul>
+        <div className="logo"></div>
         <li>
           <a href=" ">
             <i className="fa fa-twitter" aria-hidden="true"></i>

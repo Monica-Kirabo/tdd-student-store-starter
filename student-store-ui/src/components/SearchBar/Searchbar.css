@@ -1,0 +1,11 @@
+.search .searchInputs input {
+  height: 40px;
+  font-size: 16px;
+  padding: 0px 15px;
+  border-radius: 8px 0px 0px 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(228, 228, 228);
+  border-image: initial;
+  flex: 1 1 0%;
+}

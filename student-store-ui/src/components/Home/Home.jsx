@@ -7,6 +7,7 @@ import ProductsCard from "../ProductsCard/ProductCard";
 import ProductsGrid from "../ProductsGrid/ProductsGrid";
 import AboutUs from "../Aboutus/AboutUs";
 import ContactUs from "../ContactuS/ContactUs";
+import { SearchBar } from "../SearchBar/Searchbar";
 
 export default function Home({ products }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ products }) {
       <Navbar />
       <Sidebar />
       <Herobanner />
+      <SearchBar />
       <ProductsGrid products={products} />
 
       <AboutUs />

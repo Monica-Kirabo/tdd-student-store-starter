@@ -10,21 +10,21 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 #### Core Features
 
-- [ ] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
+- [ x] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
 - [x ] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
-- [ ] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
-- [ ] User can search for products.
-- [ ] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
-- [ ] User can click to expand the shopping cart in the left navigation.
-- [ ] User can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] User can click the '-' button on a product cart to increment that product in the shopping cart.
+- [x ] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
+- [x ] User can search for products.
+- [ x] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
+- [ x] User can click to expand the shopping cart in the left navigation.
+- [ x] User can click the '+' button on a product cart to increment that product in the shopping cart.
+- [ x] User can click the '-' button on a product cart to increment that product in the shopping cart.
 - [ ] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
 
 - [ ] User can click in the top navigation bar to scroll to the relevant section.
-- [ ] User sees a "not found" display when searching for a nonexistent product.
+- [ x] User sees a "not found" display when searching for a nonexistent product.
 - [ ] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
 - [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
@@ -42,8 +42,8 @@ The following specifications were met on the Express backend and the React front
   - [x ] `/` - Should render the `Home.jsx` component
   - [ x] `/products/:productId` - should render the `ProductDetail` component
   - [x ] `*` - anything else should render the `NotFound` component
-- [ ] Renders the `Navbar` component on every route
-- [ ] Renders the `Sidebar` component on every route
+- [ x] Renders the `Navbar` component on every route
+- [x ] Renders the `Sidebar` component on every route
 - [ ] Should create **at least** the following state variables:
   - [x ] `products` - an array of product objects that is initially empty.
   - [ ] `isFetching` - a boolean value representing whether or not the App is currently fetching the `products` from the API.
@@ -59,10 +59,10 @@ The following specifications were met on the Express backend and the React front
 - [ x] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
   - [ x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
   - [x ] When the request completes successfully, it should store the `products` returned by the response in state.
-  - [ ] If the request does not complete successfully, or there are no `products` found in the response,
-        it should create an error message and store it in the `error` state variable.
-- [ ] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
-  - [ ] Define as many as are needed.
+  - [ x] If the request does not complete successfully, or there are no `products` found in the response,
+    it should create an error message and store it in the `error` state variable.
+- [ x] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
+  - [x ] Define as many as are needed.
   - [ ] At minimum, **create these five handlers**:
     - [ ] The **`handleOnToggle`** function. When called...
       - [ ] It should toggle the open/closed state of the `Sidebar`.
@@ -98,12 +98,12 @@ The following specifications were met on the Express backend and the React front
 **Navbar.jsx**
 
 - [ x] Should render JSX that is wrapped by a `nav` element with a `className` of `navbar`
-- [ ] Should render the `Logo` component that links to the `/` route when clicked
+- [x ] Should render the `Logo` component that links to the `/` route when clicked
 
 **Logo.jsx**
 
-- [ ] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
-- [ ] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
+- [ x] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
+- [ x] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
 
 **Home.jsx**
 
@@ -112,13 +112,13 @@ The following specifications were met on the Express backend and the React front
   - `products` - an array of product objects
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [ ] Should render the `Hero` component
+- [x ] Should render the `Hero` component
 - [x ] Should render the `ProductGrid` component
 
 **Hero.jsx**
 
-- [ ] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
-- [ ] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
+- [ x] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
+- [x ] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
 - [ ] Should render a hero image inside an `img` tag with the `className` of `hero-img`.
 
 **ProductGrid.jsx**
@@ -218,12 +218,12 @@ The following specifications were met on the Express backend and the React front
   - `checkoutForm` - the form state for the `CheckoutForm` component
   - `handleOnCheckoutFormChange` - handler function to update the `checkoutForm`
   - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
-- [ ] Should render two `input` elements, each with the `className` of `checkout-form-input`
-  - [ ] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
-    - [ ] The first input should have:
-      - [ ] the `type` prop set to `email`
-      - [ ] the `name` prop set to `email`
-      - [ ] the `placeholder` prop set to `student@codepath.org`
+- [ x] Should render two `input` elements, each with the `className` of `checkout-form-input`
+  - [ x] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
+    - [ x] The first input should have:
+      - [x ] the `type` prop set to `email`
+      - [x ] the `name` prop set to `email`
+      - [ x] the `placeholder` prop set to `student@codepath.org`
       - [ ] the `value` prop set by `checkoutForm.email`.
       - [ ] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
     - [ ] The second input should have:

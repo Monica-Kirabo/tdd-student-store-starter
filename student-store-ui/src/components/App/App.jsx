@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import AboutUs from "../Aboutus/AboutUs";
+import { SearchBar } from "../SearchBar/Searchbar";
+import CheckOutForm from "../checkOutForm/checkoutForm";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -42,10 +44,12 @@ export default function App() {
 
             <Route path="/about" element={<AboutUs />} />
             <Route path="/*" element={<NotFound />} />
+            <Route path="/checkout" element={<CheckOutForm />} />
           </Routes>
         </main>
       </BrowserRouter>
       <Home products={products} />
+      <SearchBar products={products} />
     </div>
   );
 }
