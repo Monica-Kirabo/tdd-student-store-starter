@@ -24,7 +24,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 #### Stretch Features
 
 - [ ] User can click in the top navigation bar to scroll to the relevant section.
-- [ x] User sees a "not found" display when searching for a nonexistent product.
+- [x] User sees a "not found" display when searching for a nonexistent product.
 - [ ] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
 - [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
@@ -37,15 +37,15 @@ The following specifications were met on the Express backend and the React front
 
 **App.jsx**
 
-- [x ] The core App component that contains the routes for the app and does the initial data fetching
-- [ x] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
-  - [x ] `/` - Should render the `Home.jsx` component
-  - [ x] `/products/:productId` - should render the `ProductDetail` component
-  - [x ] `*` - anything else should render the `NotFound` component
-- [ x] Renders the `Navbar` component on every route
-- [x ] Renders the `Sidebar` component on every route
+- [x] The core App component that contains the routes for the app and does the initial data fetching
+- [x] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
+  - [x] `/` - Should render the `Home.jsx` component
+  - [x] `/products/:productId` - should render the `ProductDetail` component
+  - [x] `*` - anything else should render the `NotFound` component
+- [x] Renders the `Navbar` component on every route
+- [x] Renders the `Sidebar` component on every route
 - [ ] Should create **at least** the following state variables:
-  - [x ] `products` - an array of product objects that is initially empty.
+  - [x] `products` - an array of product objects that is initially empty.
   - [ ] `isFetching` - a boolean value representing whether or not the App is currently fetching the `products` from the API.
   - [ ] `error` - a variable used to display a message when something goes wrong with the API requests.
   - [ ] `isOpen` - a boolean value representing whether or not the `Sidebar.jsx` is in the open or closed state.
@@ -56,13 +56,13 @@ The following specifications were met on the Express backend and the React front
       - [ ] The `itemId` field should store the `id` of the item being purchased.
       - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
   - [ ] `checkoutForm` - the user's information that will be sent to the API when they checkout.
-- [ x] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
-  - [ x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
-  - [x ] When the request completes successfully, it should store the `products` returned by the response in state.
-  - [ x] If the request does not complete successfully, or there are no `products` found in the response,
+- [x] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
+  - [x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
+  - [x] When the request completes successfully, it should store the `products` returned by the response in state.
+  - [x] If the request does not complete successfully, or there are no `products` found in the response,
     it should create an error message and store it in the `error` state variable.
-- [ x] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
-  - [x ] Define as many as are needed.
+- [x] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
+  - [x] Define as many as are needed.
   - [ ] At minimum, **create these five handlers**:
     - [ ] The **`handleOnToggle`** function. When called...
       - [ ] It should toggle the open/closed state of the `Sidebar`.
@@ -97,52 +97,52 @@ The following specifications were met on the Express backend and the React front
 
 **Navbar.jsx**
 
-- [ x] Should render JSX that is wrapped by a `nav` element with a `className` of `navbar`
-- [x ] Should render the `Logo` component that links to the `/` route when clicked
+- [x] Should render JSX that is wrapped by a `nav` element with a `className` of `navbar`
+- [x] Should render the `Logo` component that links to the `/` route when clicked
 
 **Logo.jsx**
 
-- [ x] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
-- [ x] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
+- [x] Should render JSX that is wrapped by a `div` element with a `className` of `logo`
+- [x] Should use the `Link` component from `react-router-dom` to link to the home route (`/`) when clicked
 
 **Home.jsx**
 
-- [ x] Should render JSX that is wrapped by a `div` element with a `className` of `home`
+- [x] Should render JSX that is wrapped by a `div` element with a `className` of `home`
 - [ ] Should accept **at least** the following props:
   - `products` - an array of product objects
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [x ] Should render the `Hero` component
-- [x ] Should render the `ProductGrid` component
+- [x] Should render the `Hero` component
+- [x] Should render the `ProductGrid` component
 
 **Hero.jsx**
 
-- [ x] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
-- [x ] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
-- [ x] Should render a hero image inside an `img` tag with the `className` of `hero-img`.
+- [x] Should render JSX that is wrapped by a `div` element with a `className` of `hero`
+- [x] Should display an intro message inside an element with the `className` of `intro`. That message should contain the text `"Welcome!"` somewhere within it.
+- [x] Should render a hero image inside an `img` tag with the `className` of `hero-img`.
 
 **ProductGrid.jsx**
 
-- [x ] Should render JSX that is wrapped by a `div` element with a `className` of `product-grid`
+- [x] Should render JSX that is wrapped by a `div` element with a `className` of `product-grid`
 - [ ] Should accept **at least** the following props:
   - `products` - an array of product objects
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [ x] Should iterate over its `products` prop, rendering a `ProductCard` component for each one. Set the `showDescription` prop to `false` for all of the `ProductCard` components rendered in the `ProductGrid` component.
+- [x] Should iterate over its `products` prop, rendering a `ProductCard` component for each one. Set the `showDescription` prop to `false` for all of the `ProductCard` components rendered in the `ProductGrid` component.
 
 **ProductDetail.jsx**
 
-- [ x] Should render JSX that is wrapped by a `div` element with a `className` of `product-detail`
+- [x] Should render JSX that is wrapped by a `div` element with a `className` of `product-detail`
 - [ ] Should accept **at least** the following props:
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [x ] Should define **at least** a `product` state variable and updater
-- [ x] It should leverage the `useParams` hook from `react-router-dom` to extract the `productId` param from the url.
-- [ x] When the component is mounted to the screen...
-  - [ x] It should make a `GET` request to the `/store/:productId` endpoint with the `axios.get` method.
-  - [ x] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
+- [x] Should define **at least** a `product` state variable and updater
+- [x] It should leverage the `useParams` hook from `react-router-dom` to extract the `productId` param from the url.
+- [x] When the component is mounted to the screen...
+  - [x] It should make a `GET` request to the `/store/:productId` endpoint with the `axios.get` method.
+  - [x] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
   - [ ] When the initial request is loading, it should render an `h1` element with the `className` of `loading` and contain the text `"Loading..."`
-  - [x ] It should store the `product` received by the request in state and then render the `ProductView` component.
+  - [x] It should store the `product` received by the request in state and then render the `ProductView` component.
   - [ ] If no `product` is found with that `id`, it should render the `NotFound` component
 
 **ProductView.jsx**
@@ -182,7 +182,7 @@ The following specifications were met on the Express backend and the React front
 
 **Sidebar.jsx**
 
-- [ x] Should render JSX that is wrapped by a `section` element with the `className` of `sidebar`
+- [x] Should render JSX that is wrapped by a `section` element with the `className` of `sidebar`
 - [ ] Should accept **at least** the following props (and probably a few more):
   - `isOpen` - boolean representing the open/closed state of the Sidebar
   - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
@@ -192,8 +192,8 @@ The following specifications were met on the Express backend and the React front
   - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
   - `handleOnToggle` - handler function to toggle open/closed `Sidebar` state
 - [ ] It should always render a `button` element with the `className` of `toggle-button`. When that button is clicked it should change the `isOpen` prop by calling the `handleOnToggle` prop.
-- [ x] When the sidebar is opened, it should display the `ShoppingCart` and `CheckoutForm` components and should be wider than `350px`.
-- [x ] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
+- [x] When the sidebar is opened, it should display the `ShoppingCart` and `CheckoutForm` components and should be wider than `350px`.
+- [x] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
 
 **ShoppingCart.jsx**
 
@@ -218,12 +218,12 @@ The following specifications were met on the Express backend and the React front
   - `checkoutForm` - the form state for the `CheckoutForm` component
   - `handleOnCheckoutFormChange` - handler function to update the `checkoutForm`
   - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
-- [ x] Should render two `input` elements, each with the `className` of `checkout-form-input`
-  - [ x] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
+- [x] Should render two `input` elements, each with the `className` of `checkout-form-input`
+  - [x] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
     - [ x] The first input should have:
-      - [x ] the `type` prop set to `email`
-      - [x ] the `name` prop set to `email`
-      - [ x] the `placeholder` prop set to `student@codepath.org`
+      - [x] the `type` prop set to `email`
+      - [x] the `name` prop set to `email`
+      - [x] the `placeholder` prop set to `student@codepath.org`
       - [ ] the `value` prop set by `checkoutForm.email`.
       - [ ] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
     - [ ] The second input should have:
