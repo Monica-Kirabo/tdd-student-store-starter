@@ -7,8 +7,14 @@ import Sidebar from "../Sidebar/Sidebar";
 export default function ProductsGrid({ products }) {
   return (
     <div className="productsGrid">
-      {products.map((products, idx) => {
-        return <ProductsCard key={products.id} products={products} />;
+      {products.map((product, idx) => {
+        return (
+          <ProductsCard
+            key={product.id}
+            product={product}
+            productId={product.id}
+          />
+        );
       })}
 
       <Sidebar />

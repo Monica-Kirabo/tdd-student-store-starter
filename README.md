@@ -182,7 +182,7 @@ The following specifications were met on the Express backend and the React front
 
 **Sidebar.jsx**
 
-- [ ] Should render JSX that is wrapped by a `section` element with the `className` of `sidebar`
+- [ x] Should render JSX that is wrapped by a `section` element with the `className` of `sidebar`
 - [ ] Should accept **at least** the following props (and probably a few more):
   - `isOpen` - boolean representing the open/closed state of the Sidebar
   - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
@@ -192,8 +192,8 @@ The following specifications were met on the Express backend and the React front
   - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
   - `handleOnToggle` - handler function to toggle open/closed `Sidebar` state
 - [ ] It should always render a `button` element with the `className` of `toggle-button`. When that button is clicked it should change the `isOpen` prop by calling the `handleOnToggle` prop.
-- [ ] When the sidebar is opened, it should display the `ShoppingCart` and `CheckoutForm` components and should be wider than `350px`.
-- [ ] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
+- [ x] When the sidebar is opened, it should display the `ShoppingCart` and `CheckoutForm` components and should be wider than `350px`.
+- [x ] When the sidebar is closed, it should only render the toggle button and shouldn't be wider than `150px`.
 
 **ShoppingCart.jsx**
 
@@ -288,13 +288,16 @@ The following specifications were met on the Express backend and the React front
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+I felt prepared to implement rendering and using props for different steps of the project.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
 Add your response here
+If I had more time I would get my shopping cart and checkout form to work
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+
+My product details did not display on a different page as expected
 
 Add your response here
 
@@ -305,3 +308,5 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Shout out to Nick and Joram for helping me to understand most of the concepts this week.

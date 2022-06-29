@@ -40,7 +40,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home products={products} />} />
-            <Route path="/products/:productId" element={<ProductDetails />} />
+            {/* <Route path="/products/:productId" element={<ProductDetails />} /> */}
 
             <Route path="/about" element={<AboutUs />} />
             <Route path="/*" element={<NotFound />} />

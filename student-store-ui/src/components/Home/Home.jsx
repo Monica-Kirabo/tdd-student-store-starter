@@ -8,21 +8,32 @@ import ProductsGrid from "../ProductsGrid/ProductsGrid";
 import AboutUs from "../Aboutus/AboutUs";
 import ContactUs from "../ContactuS/ContactUs";
 import { SearchBar } from "../SearchBar/Searchbar";
+import { useState } from "react";
 
 export default function Home({ products }) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleOnTextChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const items = products.filter((value) => {
+    return value.name.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+
   return (
     <div className="home">
-      <div>
+      {/* <div>
         <a
           href={"/products/" + products.id}
           state={{ products: products } + products.description}
         ></a>
-      </div>
+      </div> */}
       <Navbar />
       <Sidebar />
       <Hero />
-      <SearchBar />
-      <ProductsGrid products={products} />
+      <SearchBar handleOnChange={handleOnTextChange}/>
+      <ProductsGrid products={items} />
 
       <AboutUs />
       <ContactUs />

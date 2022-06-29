@@ -4,7 +4,7 @@ import { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
 
-export function SearchBar({ products }) {
+export function SearchBar({ products, handleOnChange }) {
   const [filteredData, setFilteredData] = useState([]);
 
   const [wordEntered, setWordEntered] = useState("");
@@ -31,7 +31,7 @@ export function SearchBar({ products }) {
           type="text"
           placeholder="search products..."
           value={wordEntered}
-          onChange={handlefilter}
+          onChange={handleOnChange}
         />
         <div className="searchIcon">
           {filteredData.length === 0 ? (

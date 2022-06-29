@@ -20,7 +20,7 @@ export default function Sidebar() {
           />
           <div>
             <h1> Shopping Cart</h1>
-            <span class="material-symbols-outlined"></span>
+            <span className="material-symbols-outlined"></span>
             <p>No items added to cart yet. Start shopping</p>
             <div>
               <h1> Payment Info</h1>
