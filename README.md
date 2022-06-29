@@ -16,14 +16,14 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User can search for products.
 - [x] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
 - [x] User can click to expand the shopping cart in the left navigation.
-- [x] User can click the '+' button on a product cart to increment that product in the shopping cart.
-- [x] User can click the '-' button on a product cart to increment that product in the shopping cart.
+- [] User can click the '+' button on a product cart to increment that product in the shopping cart.
+- [] User can click the '-' button on a product cart to increment that product in the shopping cart.
 - [ ] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
 
-- [ ] User can click in the top navigation bar to scroll to the relevant section.
+- [ x] User can click in the top navigation bar to scroll to the relevant section.
 - [x] User sees a "not found" display when searching for a nonexistent product.
 - [ ] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
 - [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
@@ -60,7 +60,7 @@ The following specifications were met on the Express backend and the React front
   - [x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
   - [x] When the request completes successfully, it should store the `products` returned by the response in state.
   - [x] If the request does not complete successfully, or there are no `products` found in the response,
-    it should create an error message and store it in the `error` state variable.
+        it should create an error message and store it in the `error` state variable.
 - [x] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
   - [x] Define as many as are needed.
   - [ ] At minimum, **create these five handlers**:
