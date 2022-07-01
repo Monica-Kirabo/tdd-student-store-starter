@@ -12,11 +12,11 @@ import Navbar from "../Navbar/Navbar";
 import AboutUs from "../Aboutus/AboutUs";
 import Sidebar from "../Sidebar/Sidebar";
 //import { SearchBar } from "../SearchBar/Searchbar";
-import CheckOutForm from "../checkOutForm/checkoutForm";
+import CheckOutForm from "../checkOutForm/CheckoutForm";
 
 export default function App() {
   const [products, setProducts] = useState([]);
-  const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [shoppingCart, setShoppingCart] = useState([]);
   const [subtotal, setSubtotal] = useState(0);
@@ -41,11 +41,7 @@ export default function App() {
   }, []);
 
   const handleOnToggle = () => {
-    if (isOpen) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
+    setIsOpen(!isOpen);
   };
 
   const handleAddItemToCart = (productId) => {
@@ -103,7 +99,6 @@ export default function App() {
   return (
     <div className="app">
       <BrowserRouter>
-       
         <Sidebar
           handleOnToggle={handleOnToggle}
           isOpen={isOpen}

@@ -55,7 +55,7 @@ export default function ProductDetails({products}) {
     
   
      
-      <Sidebar />
+     
       <Navbar />
       {product ? 
       <ProductView product={product} productId={productId} /> : null}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import CheckoutForm from "../checkOutForm/CheckoutForm";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import "./Sidebar.css";
 import { useState } from "react";
@@ -19,24 +19,23 @@ export default function Sidebar({
   cartSize,
   setSubtotal,
 }) {
-  const arrow = isOpen ? "←" : "→";
+  const shoppingCartEmpty = !shoppingCart && isOpen ? (
+    <p>No items added to cart yet. Start shopping now!</p>
+  ) : null;
+  const sidebarClass = isOpen ? "sidebar-active" : "sidebar";
   return (
-    <section className="sidebar">
-      <section className="sidenav" style={{ width: isOpen ? "600px" : "50px" }}>
-        <div className="allitems">
-          <div className={isOpen ? "←" : "→"} onClick={handleOnToggle}>
-            <i className="material-icons md-48">{arrow}</i>
-          </div>
-          <div className={isOpen ? "closedIcon open" : "closedIcon closed"}>
-            <i className="material-icons md-48">add_shopping_cart</i>
-          </div>
-          <div className={isOpen ? "closedIcon open" : "closedIcon closed"}>
-            <i className="material-icons md-48">monetization_on</i>
-          </div>
-          <div className={isOpen ? "closedIcon open" : "closedIcon closed"}>
-            <i className="material-icons md-48">fact_check</i>
-          </div>
+    <section className={sidebarClass}>
+      <section className="sidenav">
+        <div className="all-items">
+          <button onClick={handleOnToggle}>CLICK</button>
+
+          <i className="material-icons md-48">add_shopping_cart</i>
+
+          <i className="material-icons md-48">monetization_on</i>
+
+          <i className="material-icons md-48">fact_check</i>
         </div>
+        {shoppingCartEmpty}
         <ShoppingCart
           isOpen={isOpen}
           shoppingCart={shoppingCart}
@@ -44,7 +43,7 @@ export default function Sidebar({
           subtotal={subtotal}
           cartSize={cartSize}
         />
-        <CheckoutForm />
+        <CheckoutForm isOpen={isOpen} />
       </section>
     </section>
   );
