@@ -32,7 +32,7 @@ export default function Home(props) {
         <div class="content">
           <div class="row">
             <div class="search-bar">
-              <input type="text" name="search" placeholder="Search" value />
+              <input type="text" name="search" placeholder="Search" />
               <i class="material-icons">search</i>
             </div>
             <div class="links">

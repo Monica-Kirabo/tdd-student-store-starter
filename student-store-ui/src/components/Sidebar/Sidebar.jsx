@@ -24,6 +24,7 @@ export default function Sidebar({
   ) : null;
   const sidebarClass = isOpen ? "sidebar-active" : "sidebar";
   return (
+    <div className="here">
     <section className={sidebarClass}>
       <section className="sidenav">
         <div className="all-items">
@@ -46,5 +47,6 @@ export default function Sidebar({
         <CheckoutForm isOpen={isOpen} />
       </section>
     </section>
+    </div>
   );
 }

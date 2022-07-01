@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  background-color: darkslategrey;
+  color: white;
 }
-
+.here{
+  background-color: darkslategrey;
+  color:white
+}
 /* .sidebar {
   margin-top: 100px;
   width: 200px;
