@@ -41,7 +41,44 @@
   min-height: 350px;
   margin: 40px 0;
 }
-h1 {
-  text-indent: 1in;
-  text-align: left;
+.AboutUs .h1 {
+  text-indent: 10in;
+  text-align: center;
+}
+.AboutUs {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 350px;
+  margin-top: 40px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.AboutUs .content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+
+.AboutUs .content {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  height: 330px;
+  border: solid 1px #e0e0e0;
+}
+
+.AboutUs .content .text {
+  align-items: flex-start;
+  padding: 28px 36px;
+  color: #5b5b5b;
+}
+
+.AboutUs .content .media {
+  background: #2c4047;
+  height: 329px;
 }
