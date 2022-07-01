@@ -17,7 +17,7 @@ class Store {
   }
 
 
-static placeOrdler(order){
+static placeOrder(order){
 
 
 }
