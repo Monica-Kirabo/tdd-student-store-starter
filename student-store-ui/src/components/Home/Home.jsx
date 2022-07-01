@@ -23,7 +23,7 @@ export default function Home(props) {
   return (
     <div className="home">
       <Navbar />
-
+<Hero/>
       <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
