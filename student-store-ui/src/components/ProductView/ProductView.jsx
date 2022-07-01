@@ -3,19 +3,19 @@ import "./ProductView.css";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import ProductsCard from "../ProductsCard/ProductCard";
-export default function ProductView({ products, productId }) {
+export default function ProductView({ product, productId }) {
   return (
     <div className="view">
-      <h1>Best Selling Products</h1>
-      <ProductsCard
+     
+      { <ProductsCard
         showDescription={true}
-        products={products}
+        product={product}
         productId={productId}
-      />
+      />}
 
-      <Navbar />
+     
 
-      <Sidebar />
+      
     </div>
   );
 }

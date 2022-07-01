@@ -19,38 +19,46 @@ import ProductsCard from "../ProductsCard/ProductCard";
 import ProductsGrid from "../ProductsGrid/ProductsGrid";
 
 import { useState } from "react";
-export default function ProductDetails() {
+import NotFound from "../NotFound/NotFound";
+export default function ProductDetails({products}) {
   const { productId } = useParams();
   //const location = useLocation();
-  const [products, setProduct] = useState();
-  const isLoading = !Boolean(products);
-  const element = isLoading ? (
-    "Loading.."
-  ) : (
-    <ProductView products={products} productId={productId} />
-  );
+  const [product, setProduct] = useState(null);
+  const isLoading = !Boolean(product);
+  
 
   useEffect(async () => {
     console.log("checking the value of product id again", productId);
 
-    const url = "https://codepath-store-api.herokuapp.com/store" + productId;
+    const url = "http://localhost:3001/store/" + productId;
 
     try {
       const response = await axios.get(url);
-      console.log("response from second API call: ", response.data.products);
+      console.log("response from second API call: ", response.data.product);
+      console.log(response);
+      setProduct(response.data.product);
 
-      setProduct(response.data.products);
-
-      console.log(products);
+      
     } catch (error) {
       console.log(error);
     }
   }, []);
+
+ // if(product === null){
+   // return <NotFound />
+ // }
   return (
     <div className="product-detail">
-      <div className="box">{element}</div>
+      {/* const element = isLoading ? (
+    "Loading.."
+  ) : ( */}
+    
+  
+     
       <Sidebar />
       <Navbar />
+      {product ? 
+      <ProductView product={product} productId={productId} /> : null}
     </div>
   );
 }
