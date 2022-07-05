@@ -62,7 +62,7 @@ export default function ShoppingCart({
       <div className="receipt">
        
         <div className="receipt-subtotal">
-        <h4>RECEIPT</h4>
+       
           <span className="label">Subtotal</span>
           <span></span>
           <span></span>

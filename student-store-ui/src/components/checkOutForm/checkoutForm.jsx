@@ -1,11 +1,39 @@
 import * as React from "react";
 import "./CheckoutForm.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-export default function CheckoutForm({ isOpen, handleOnCheckOut }) {
+export default function CheckoutForm({ isOpen}) {
+
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleOnCheckOut = () => {
+    var userInfo = {
+      name: name,
+      email: email,
+    };
+    axios.post(`http://localhost:3001/store`, {
+      shoppingCart: props.shoppingCart,
+      user: userInfo,
+    });
+
+    props.setShoppingCart([]);
+    document.getElementById("nameInput").value = "";
+    document.getElementById("email").value = "";
+  };
   const checkoutFormView = isOpen ? (
     <div className="checkout-form">
-      <h3 >
-        "Payment Info"
+      <h3>
+        Payment Info
         <span className="button">
           <i className="material-icons md-48">monetization_on</i>
         </span>
@@ -18,6 +46,7 @@ export default function CheckoutForm({ isOpen, handleOnCheckOut }) {
             className="checkout-form-input"
             type="text"
             placeholder="Student Name"
+            onChange={handleNameChange}
           ></input>
         </div>
       </div>
@@ -28,6 +57,7 @@ export default function CheckoutForm({ isOpen, handleOnCheckOut }) {
             name="email"
             className="checkout-form-input"
             placeholder="student@codepath.org"
+            onChange={handleEmailChange}
           ></input>
         </div>
       </div>
@@ -49,32 +79,17 @@ export default function CheckoutForm({ isOpen, handleOnCheckOut }) {
             Checkout
           </button>
         </div>
+        <p>
+          A confirmation email will be sent to you so that you can confirm this
+          order. <br></br>Once you have confirmed the order, it will be
+          delivered to your dorm room.
+        </p>
       </div>
     </div>
   ) : null;
 
   return (
     <div>{checkoutFormView}</div>
-    // <div>
-    //   <h1> Shopping Cart</h1>
-    //   <p>No items added to cart yet. Start shopping</p>
-    //   <div>
-    //     <h1> Payment Info</h1>
-    //   </div>
-
-    //   <div>
-    //     <p>Name</p>
-    //     <input type="text" placeholder="student Name..." />
-    //     <p>Email</p>
-    //     <input type="text" placeholder="student@codepath.org..." />
-    //   </div>
-
-    //   <h1>CheckOut Info</h1>
-    //   <p>
-    //     A confirmation email will be sent to you so that you can confirm this
-    //     order. Once you have confirmed the order, it will be delivered to your
-    //     dorm room.
-    //   </p>
-    // </div>
+    
   );
 }

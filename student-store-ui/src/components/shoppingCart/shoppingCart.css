@@ -1,15 +1,10 @@
-.closed {
-    display: hidden;
-}
-
 .shopping-cart h3{
     color: white;
 }
 
 .shopping-cart .notification{
-    color: black;
+    color: white;
 }
-
 
 .shopping-cart .open {
   max-width: 550px;
@@ -23,7 +18,7 @@
 .shopping-cart .CartTable .header {
   display: flex;
   flex-direction: column;
-  
+  background: black;
   border: solid 1px #e4e4e4;
   border-radius: 4px;
   width: 100%;
@@ -62,5 +57,28 @@
 
 .shopping-cart .product-row span {
   flex: 1;
+}
+
+.shopping-cart .receipt {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.shopping-cart .receipt .receipt-subtotal,
+.shopping-cart .receipt .receipt-taxes,
+.shopping-cart .receipt .receipt-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.shopping-cart .receipt .label {
+  font-weight: 600;
+  padding-left: 10px;
 }
 
