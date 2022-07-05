@@ -1,7 +1,9 @@
 import * as React from "react";
+import Sidebar from "../Sidebar/Sidebar";
 import "./ContactUs.css";
 
 export default function ContactUs() {
+
   return (
     <div className="ContactUs">
       <h1>Contact Us</h1>
@@ -37,5 +39,7 @@ export default function ContactUs() {
         </div>
       </div>
     </div>
+   
   );
+
 }

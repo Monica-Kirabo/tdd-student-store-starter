@@ -12,11 +12,11 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use("/store", router)
 
-//app.use("/gift-exchange", router);
 
  app.get("/", (req, res) => {
    res.status(200).json({ ping: "pong" });
  });
+ 
 // app.get("/store", (req, res) => {
 //   res.send(storage.get("products").value());
 //  });

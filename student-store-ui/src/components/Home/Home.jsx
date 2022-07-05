@@ -28,44 +28,44 @@ export default function Home(props) {
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       ></link>
-      <nav class="sub-navbar">
-        <div class="content">
-          <div class="row">
-            <div class="search-bar">
+      <nav className="sub-navbar">
+        <div className="content">
+          <div className="row">
+            <div className="search-bar">
               <input type="text" name="search" placeholder="Search" />
-              <i class="material-icons">search</i>
+              <i className="material-icons">search</i>
             </div>
-            <div class="links">
-              <span class="help">
-                <i class="material-icons">help</i>
+            <div className="links">
+              <span className="help">
+                <i className="material-icons">help</i>
                 "Help"
               </span>
-              <div class="cart">
+              <div className="cart">
                 <a href="/">
                   "My Cart"
-                  <i class="material-icons">shopping_cart</i>
+                  <i className="material-icons">shopping_cart</i>
                 </a>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="hamburger-menu">
-              <i class="material=icons"></i>
+          <div className="row">
+            <div className="hamburger-menu">
+              <i className="material=icons"></i>
             </div>
-            <ul class="category-menu open">
-              <li class="is-active">
+            <ul className="category-menu open">
+              <li className="is-active">
                 <button>All Categories</button>
               </li>
-              <li class>
+              <li >
                 <button>Clothing</button>
               </li>
-              <li class>
+              <li >
                 <button>Food</button>
               </li>
-              <li class>
+              <li >
                 <button>Accessories</button>
               </li>
-              <li class>
+              <li >
                 <button>Tech</button>
               </li>
             </ul>
@@ -82,11 +82,11 @@ export default function Home(props) {
       <AboutUs />
       <ContactUs />
       <div>
-        <footer class="footer">
-          <div class="content">
-            <div class="top">
-              <div class="links">
-                <div class="link-column">
+        <footer className="footer">
+          <div className="content">
+            <div className="top">
+              <div className="links">
+                <div className="link-column">
                   <h4>Categories</h4>
                   <ul>
                     <li>All Categories</li>
@@ -96,7 +96,7 @@ export default function Home(props) {
                     <li>Tech</li>
                   </ul>
                 </div>
-                <div class="link-column">
+                <div className="link-column">
                   <h4>Company</h4>
                   <ul>
                     <li>About Us</li>
@@ -106,7 +106,7 @@ export default function Home(props) {
                     <li>Careers</li>
                   </ul>
                 </div>
-                <div class="link-column">
+                <div className="link-column">
                   <h4>Support</h4>
                   <ul>
                     <li>Contact Us</li>
@@ -116,7 +116,7 @@ export default function Home(props) {
                     <li>Open Dispute</li>
                   </ul>
                 </div>
-                <div class="link-column">
+                <div className="link-column">
                   <h4>Account</h4>
                   <ul>
                     <li>Login</li>
@@ -125,7 +125,7 @@ export default function Home(props) {
                     <li>My Orders</li>
                   </ul>
                 </div>
-                <div class="link-column">
+                <div className="link-column">
                   <h4>Socials</h4>
                   <ul>
                     <li>Facebook</li>
@@ -135,7 +135,7 @@ export default function Home(props) {
                     <li>YouTube</li>
                   </ul>
                 </div>
-                <div class="link-column">
+                <div className="link-column">
                   <h4>Our App</h4>
                   <ul>
                     <li>
@@ -148,8 +148,8 @@ export default function Home(props) {
                 </div>
               </div>
             </div>
-            <div class="bottom">
-              <span class="payment-options">
+            <div className="bottom">
+              <span className="payment-options">
                 <img
                   src="https://codepath-student-store-demo.surge.sh/assets/american_express.40f242c7.svg"
                   alt="american express"
@@ -175,131 +175,4 @@ export default function Home(props) {
   );
 }
 
-//   {<footer className="footer">
-//   <div className="content">
-//     <div className="top">
-//       <div className="links">
-//         <div className="link-column">
-//           <h4>Categories</h4>
-//           <ul>
-//             <li>All Categories</li>
-//             <li>Clothing</li>
-//             <li>Food</li>
-//             <li>Accessories</li>
-//             <li>Tech</li>
-//           </ul>
-//         </div>
-//         <div className="link-column">
-//           <h4>Company</h4>
-//           <ul>
-//             <li>About Us</li>
-//             <li>Find a Store</li>
-//             <li>Terms</li>
-//             <li>Sitemap</li>
-//             <li>Careers</li>
-//           </ul>
-//         </div>
-//         <div className="link-column">
-//           <h4>Support</h4>
-//           <ul>
-//             <li>Contact Us</li>
-//             <li>Money Refund</li>
-//             <li>Order Status</li>
-//             <li>Shipping Info</li>
-//             <li>Open Dispute</li>
-//           </ul>
-//         </div>
-//         <div className="link-column">
-//           <h4>Account</h4>
-//           <ul>
-//             <li>Login</li>
-//             <li>Register</li>
-//             <li>Account Setting</li>
-//             <li>My Orders</li>
-//           </ul>
-//         </div>
-//         <div className="link-column">
-//           <h4>Our App</h4>
-//           <ul>
-//             <li>
-//               <img
-//                 src="https://codepath-student-store-demo.surge.sh/assets/app_store.a7d8c549.svg"
-//                 alt="app store"
-//               />
-//             </li>
-//             <li>
-//               <img
-//                 src="https://codepath-student-store-demo.surge.sh/assets/google_play.27aab7c8.svg"
-//                 alt="app store"
-//               />
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
-//     <footer className="footer">
-//     <div className="content">
-//       <div className="top">
-//         <div className="links">
-//           <div className="link-column">
-//             <h4>Categories</h4>
-//             <ul>
-//               <li>All Categories</li>
-//               <li>Clothing</li>
-//               <li>Food</li>
-//               <li>Accessories</li>
-//               <li>Tech</li>
-//             </ul>
-//           </div>
-//           <div className="link-column">
-//             <h4>Company</h4>
-//             <ul>
-//               <li>About Us</li>
-//               <li>Find a Store</li>
-//               <li>Terms</li>
-//               <li>Sitemap</li>
-//               <li>Careers</li>
-//             </ul>
-//           </div>
-//           <div className="link-column">
-//             <h4>Support</h4>
-//             <ul>
-//               <li>Contact Us</li>
-//               <li>Money Refund</li>
-//               <li>Order Status</li>
-//               <li>Shipping Info</li>
-//               <li>Open Dispute</li>
-//             </ul>
-//           </div>
-//           <div className="link-column">
-//             <h4>Account</h4>
-//             <ul>
-//               <li>Login</li>
-//               <li>Register</li>
-//               <li>Account Setting</li>
-//               <li>My Orders</li>
-//             </ul>
-//           </div>
-//           <div className="link-column">
-//             <h4>Our App</h4>
-//             <ul>
-//               <li>
-//                 <img
-//                   src="https://codepath-student-store-demo.surge.sh/assets/app_store.a7d8c549.svg"
-//                   alt="app store"
-//                 />
-//               </li>
-//               <li>
-//                 <img
-//                   src="https://codepath-student-store-demo.surge.sh/assets/google_play.27aab7c8.svg"
-//                   alt="app store"
-//                 />
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//     </div>
-//   </div>
-// </footer>
+

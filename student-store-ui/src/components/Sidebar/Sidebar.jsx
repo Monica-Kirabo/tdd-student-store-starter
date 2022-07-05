@@ -44,7 +44,15 @@ export default function Sidebar({
           subtotal={subtotal}
           cartSize={cartSize}
         />
-        <CheckoutForm isOpen={isOpen} />
+        <CheckoutForm isOpen={isOpen} 
+        
+        handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+        handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+     
+        shoppingCart={shoppingCart}
+        checkoutForm={checkoutForm}
+        setShoppingCart={setShoppingCart}
+        />
       </section>
     </section>
     </div>

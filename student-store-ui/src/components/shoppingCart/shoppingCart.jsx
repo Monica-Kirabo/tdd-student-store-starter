@@ -14,23 +14,7 @@ export default function ShoppingCart({
   var taxes = subprice * 0.09;
   var totPrice = subprice + taxes;
 
-  // if (cartSize === 0) {
-  //   return (
-  //     <div className="shopping-cart">
-  //       <div className={isOpen ? "open" : "closed"}>
-  //         <h3 className="notif">
-  //           Shopping Cart
-  //           <span className="icon">
-  //             <i className="material-icons md-48">add_shopping_cart</i>
-  //           </span>
-  //         </h3>
-  //         <div className="notification">
-  //           No items added to cart yet. Start shopping now!
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+
 
   const shoppingCartView = isOpen ? (    <div className="shopping-cart">
   <div className={isOpen ? "open" : "closed"}>
@@ -43,16 +27,20 @@ export default function ShoppingCart({
     <div className="CartTable">
       <div className="header">
         <div className="header-row">
-          <span className="flex-2">Name</span>
+          <span className="flex-2">Name </span>
+          <span>  </span>
+       
           <span className="center">Quantity</span>
+          <span>   </span>
           <span className="center">Unit Price</span>
+          <span>  </span>
           <span className="center">Cost</span>
         </div>
         {shoppingCart
           ? shoppingCart.map((item, idx) => (
               <div className="product-row" key={idx}>
                 <span className="flex-2 cart-product-name">
-                  {products.find((elem) => elem.id === item.itemId).name}
+                  {products.find((elem) =>elem.id === item.itemId).name}
                 </span>
                 <span className="center cart-product-quantity">
                   {item.quantity}
@@ -72,7 +60,9 @@ export default function ShoppingCart({
           : null}
       </div>
       <div className="receipt">
+       
         <div className="receipt-subtotal">
+        <h4>RECEIPT</h4>
           <span className="label">Subtotal</span>
           <span></span>
           <span></span>
