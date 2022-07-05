@@ -11,8 +11,7 @@ export default function Sidebar({
   shoppingCart,
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
-  handleAddItemToCart,
-  handleRemoveItemToCart,
+  
   checkoutForm,
   setShoppingCart,
   subtotal,
