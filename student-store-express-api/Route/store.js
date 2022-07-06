@@ -21,10 +21,10 @@ router.get("/:productId", (req, res) => {
 
 router.post("/store", async (req, res, next) => {
     try {
-      const newItem = req.body.products;
+      const newItem = req.body;
       const shoppingCart=newItem.shoppingCart;
       const user=newItem.user;
-      if (!user || !shoppingCart) {
+      if (!user || !shoppingCart||store.checkErrors(shoppingCart)) {
         return next(new BadRequestError("Invalid input"));
       }
       const item = await store.Order(shoppingCart,user);

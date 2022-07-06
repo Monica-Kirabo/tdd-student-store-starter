@@ -19,15 +19,15 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 - [x] User can click the '+' button on a product cart to increment that product in the shopping cart.
 - [x] User can click the '-' button on a product cart to increment that product in the shopping cart.
 - [x] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
-- [ ] User can check out, and can view receipt upon completion.
+- [x] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
 
 - [x] User can click in the top navigation bar to scroll to the relevant section.
 - [x] User sees a "not found" display when searching for a nonexistent product.
 - [x] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
-- [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
-- [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
+- [x] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
+- [x] Allow users to use an input to filter orders by the email of the person who placed the order.
 
 ### Passing Automated Tests
 
@@ -47,15 +47,15 @@ The following specifications were met on the Express backend and the React front
 - [ ] Should create **at least** the following state variables:
   - [x] `products` - an array of product objects that is initially empty.
   - [ ] `isFetching` - a boolean value representing whether or not the App is currently fetching the `products` from the API.
-  - [ ] `error` - a variable used to display a message when something goes wrong with the API requests.
-  - [ ] `isOpen` - a boolean value representing whether or not the `Sidebar.jsx` is in the open or closed state.
-  - [ ] `shoppingCart` - should store state for the active user's shopping cart (items they want to purchase and the quantity of each item).
-    - [ ] Use whatever data type works best here, but make sure the format the `shoppingCart` as an array before passing it to other components.
-    - [ ] When passed down to other components as a prop, it should formatted as an array of objects.
-    - [ ] Each object in the array should have two fields:
-      - [ ] The `itemId` field should store the `id` of the item being purchased.
-      - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
-  - [ ] `checkoutForm` - the user's information that will be sent to the API when they checkout.
+  - [x] `error` - a variable used to display a message when something goes wrong with the API requests.
+  - [x] `isOpen` - a boolean value representing whether or not the `Sidebar.jsx` is in the open or closed state.
+  - [x] `shoppingCart` - should store state for the active user's shopping cart (items they want to purchase and the quantity of each item).
+    - [x] Use whatever data type works best here, but make sure the format the `shoppingCart` as an array before passing it to other components.
+    - [x] When passed down to other components as a prop, it should formatted as an array of objects.
+    - [x] Each object in the array should have two fields:
+      - [x] The `itemId` field should store the `id` of the item being purchased.
+      - [x] The `quantity` field should store a number representing how many of that item the user is purchasing.
+  - [x] `checkoutForm` - the user's information that will be sent to the API when they checkout.
 - [x] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
   - [x] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
   - [x] When the request completes successfully, it should store the `products` returned by the response in state.
@@ -63,14 +63,14 @@ The following specifications were met on the Express backend and the React front
         it should create an error message and store it in the `error` state variable.
 - [x] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
   - [x] Define as many as are needed.
-  - [ ] At minimum, **create these five handlers**:
-    - [ ] The **`handleOnToggle`** function. When called...
-      - [ ] It should toggle the open/closed state of the `Sidebar`.
-    - [ ] The **`handleAddItemToCart`** function. When called...
-      - [ ] It should accept a single argument - `productId`
-      - [ ] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
-      - [ ] If it does exist, it should increase the quantity by `1`.
-      - [ ] It should add the price of the product to the total price of the `shoppingCart`.
+  - [x] At minimum, **create these five handlers**:
+    - [x] The **`handleOnToggle`** function. When called...
+      - [x] It should toggle the open/closed state of the `Sidebar`.
+    - [x] The **`handleAddItemToCart`** function. When called...
+      - [x] It should accept a single argument - `productId`
+      - [x] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
+      - [x] If it does exist, it should increase the quantity by `1`.
+      - [x] It should add the price of the product to the total price of the `shoppingCart`.
     - [ ] The **`handleRemoveItemFromCart`** function. When called...
       - [ ] It should accept a single argument - `productId`
       - [ ] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
